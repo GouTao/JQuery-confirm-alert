@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>自定义组件</title>
+		<link rel="stylesheet" href="css/font-awesome/css/font-awesome.min.css" />
+		<script type="text/javascript" src="HPCF/jquery.min.js" ></script>
+		<link rel="stylesheet" href="HPCF/H-confirm-alert.css" />
+		<script type="text/javascript" src="HPCF/H-confirm-alert.js" ></script>
+	</head>
+	<body>
+		<script>
+			$(function(){
+				$.confirm.show({
+					"message":"JCC是SB么？",
+					"noText":"no",
+					"type":"warning",
+					"yes":function(){
+						$.confirm.show({
+							"message":"你真是个人才？",
+							"noText":"否",
+							"type":"success",
+						})
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
